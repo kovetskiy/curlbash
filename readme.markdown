@@ -1,4 +1,4 @@
-# curlbash
+# wgetbash
 
 ### How many times you've seen `curl | bash` in your Dockerfiles?
 
@@ -18,14 +18,14 @@ And now look how Dockerfile looks after:
 
 as root:
 ```
-# curl -k https://raw.githubusercontent.com/kovetskiy/curlbash/master/curlbash > /usr/bin/curlbash
-# chmod +x /usr/bin/curlbash
+# curl -k -O /usr/bin/wgetbash https://raw.githubusercontent.com/michaelmhoffman/wgetbash/master/wgetbash
+# chmod +x /usr/bin/wgetbash
 ```
 
 ## Usage
 
 ```
-# curlbash <URL>
+# wgetbash <URL>
 ```
 
 Where `<URL>` is a link to some install script.
@@ -35,7 +35,7 @@ Where `<URL>` is a link to some install script.
 Install two or more URLs:
 
 ```
-# curlbash \
+# wgetbash \
     http://localhost.localdomain/1.bash \
     http://localhost.localdomain/2.bash \
     http://localhost.localdomain/3.bash \
@@ -45,3 +45,9 @@ Install two or more URLs:
 ## License
 
 MIT.
+
+## Acknowledgments
+
+Fork of curlbash by Egor Kovetskiy
+
+https://github.com/kovetskiy/curlbash
