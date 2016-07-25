@@ -4,6 +4,6 @@ set -euo pipefail
 
 while [[ $# -ne 0 ]]; do
     echo ": Installing $1..."
-    curl -s -k "$1" | bash
+    wget -s -O - "$1" | bash
     shift
 done
